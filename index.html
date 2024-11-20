@@ -1,0 +1,554 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>MS&CO Scaffolding</title>
+  <link rel="stylesheet" href="index.css">
+  <script src="https://kit.fontawesome.com/6e29e245a4.js" crossorigin="anonymous"></script>
+
+  <link rel="stylesheet" href="website.css">
+  <style>
+    #why-us {
+      margin-top: 20vh;
+    }
+
+    .content-boxes {
+      margin-bottom: 20vh;
+    }
+
+    .box-wrap {
+      text-align: center;
+    }
+
+    .box-wrap i {
+      text-align: center;
+      font-size: 2rem;
+      margin-bottom: 1rem;
+    }
+
+    #navi-icons2 {
+      display: none;
+    }
+
+    .nav-link,
+    .navbar-brand {
+      color: #ffc107 !important;
+      /* Warning yellow */
+    }
+
+    /*.navbar-toggler
+      {
+        color: #ffc107 !important; 
+        background-color: #ffc107;
+      }
+      */
+    .navbar-toggler-icon {
+      color: #ffc107 !important;
+      /* Warning yellow */
+
+    }
+
+    .span i {
+
+      color: #ffc107;
+      transform: rotatex(90deg);
+    }
+  </style>
+</head>
+
+<body>
+
+  <nav class="navbar navbar-expand-lg navbar-light position-fixed" id="home">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="#">MS & co Scaffolding</a>
+      <button class="navbar-toggler" onclick="butTog()" type="button" data-bs-toggle="collapse"
+        data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+        aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"><i class="fa-solid fa-bars" id="navi-icons1"></i><i class="fa-solid fa-xmark"
+            id="navi-icons2"></i></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav ms-auto mb-2 mb-lg-0  align-items-right">
+          <li class="nav-item">
+            <a class="nav-link active" aria-current="page" href="#home">HOME</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link active" aria-current="page" href="#about">ABOUT</a>
+          </li>
+
+          <li class="nav-item">
+            <a class="nav-link active" aria-current="page" href="#why-us">WhyUs</a>
+          </li>
+
+          <li class="nav-item">
+            <a class="nav-link active" aria-current="page" href="#services">SERVICES</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link active" aria-current="page" href="#gallery">GALLERY</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link active" aria-current="page" href="#contact-us">CONTACT US</a>
+          </li>
+
+
+        </ul>
+
+      </div>
+    </div>
+  </nav>
+
+  <div class="side-bar">
+    <div class="social-icons">
+      <a href="https://wa.me/+919159621674">
+        <div class="social-icon si-1">
+      
+          <i class="fa-brands fa-whatsapp"></i>
+          <h5>Whatsapp</h5>
+          
+        </div>
+      </a>
+
+      <a href="mailto:edwin26496@gmail.com">
+        <div class="social-icon si-2">  
+          <i class="fa-solid fa-envelope"></i>
+          <h5>Email Us</h5>
+        </div>
+      </a>
+
+      <a href="tel:+91 9159621674">
+        <div class="social-icon si-3">
+          <i class="fa-solid fa-phone"></i>
+          <h5>Call Now</h5>
+        </div>
+      </a>
+
+    </div>
+  </div>
+
+  <a href="#">
+    <div class="to-up">
+      <i class="fa-solid fa-angle-up"></i>
+    </div>
+  </a>
+
+  <div class="image-slider">
+    <div class="image-slider-1" id="i-s-1">
+
+    </div>
+    <div class="image-slider-2" id="i-s-2">
+
+    </div>
+    <div class="image-slider-3" id="i-s-3">
+
+    </div>
+    <div class="image-slider-4" id="i-s-4">
+      <div class="heading">
+        <span>Scaffolding</span><br> Rental Services
+        <div class="heading-1">
+          Scaffolding solution provider in TamilNadu.
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <script>
+
+
+    let clickme = 0;
+    function butTog() {
+      if (clickme == 0) {
+
+        document.getElementById("navi-icons2").style.display = "inline";
+        document.getElementById("navi-icons1").style.display = "none";
+        clickme = 1;
+
+      }
+      else {
+        document.getElementById("navi-icons2").style.display = "none";
+        document.getElementById("navi-icons1").style.display = "inline";
+        clickme = 0;
+      }
+    }
+
+
+
+
+    sliderss();
+    function sliderss() {
+      let i = 0;
+
+      function changeSlider() {
+        if (i % 3 == 0) {
+          slider1();
+        }
+        else if (i % 3 == 1) {
+          slider2();
+        }
+        else if (i % 3 == 2) {
+          slider4();
+        }
+        else {
+          slider3();
+        }
+        i++;
+
+        if (i < 10000000) {
+          setTimeout(changeSlider, 5000);
+        }
+        else {
+          i = 0;
+        }
+      }
+      changeSlider();
+    }
+    function slider1() {
+      document.getElementById("i-s-1").style.zIndex = "1";
+      document.getElementById("i-s-2").style.zIndex = "2";
+      document.getElementById("i-s-3").style.zIndex = "1";
+      document.getElementById("i-s-4").style.zIndex = "1";
+    }
+    function slider2() {
+      document.getElementById("i-s-1").style.zIndex = "1";
+      document.getElementById("i-s-2").style.zIndex = "1";
+      document.getElementById("i-s-3").style.zIndex = "2";
+      document.getElementById("i-s-4").style.zIndex = "1";
+    }
+    function slider3() {
+      document.getElementById("i-s-1").style.zIndex = "2";
+      document.getElementById("i-s-2").style.zIndex = "1";
+      document.getElementById("i-s-3").style.zIndex = "1";
+      document.getElementById("i-s-4").style.zIndex = "1";
+    }
+
+    function slider4() {
+      document.getElementById("i-s-4").style.zIndex = "2";
+      document.getElementById("i-s-2").style.zIndex = "1";
+      document.getElementById("i-s-3").style.zIndex = "1";
+      document.getElementById("i-s-1").style.zIndex = "1";
+    }
+  </script>
+  </script>
+
+
+
+<div class="outer-layer">
+
+  <div class="back-ground">
+    <div class="container-fluid" id="home">
+
+    </div>
+
+
+
+    <!---------------------------------Start------------------------------------------>
+
+    <div class="back-ground">
+
+
+      <div class="container-fluid" id="about">
+        <div class="services-headline">
+          <h1>About</h1>
+          <h4>We specialize in providing top-notch on-hire and rental scaffolding services.</h4>
+          <div class="line">
+          </div>
+        </div>
+
+
+
+        <div class="flex-boxes">
+
+          <div class="flex-box fb1">
+            <div class="left-section">
+              <div class="flex-img">
+                <img src="images/colleges.jpg">
+              </div>
+            </div>
+
+            <div class="right-section">
+              <div class="rs">
+                <h3>Quality Assurance</h3>
+                <p>We, being a very quality conscious organization, ensure that we Implement and adhere to stringent
+                  quality control measures as per the International standards.</p>
+              </div>
+            </div>
+          </div>
+
+
+          <div class="flex-box fb2">
+
+            <div class="right-section">
+              <div class="rs rs-mid">
+                <h3>Our Strengths</h3>
+                <p>We have professionally trained team of Scaffolders & helpers. Periodically, we provide additional
+                  training to the team on Safety. In the work site the team is managed and carefully monitored under
+                  the
+                  supervision of our quality experts.
+                </p>
+              </div>
+            </div>
+
+            <div class="left-section">
+              <div class="flex-img">
+                <img src="images/auditorium.jpg">
+              </div>
+            </div>
+
+
+          </div>
+
+          <div class="flex-box fb3">
+            <div class="left-section">
+              <div class="flex-img">
+                <img src="images/auditorium.jpg">
+              </div>
+            </div>
+
+            <div class="right-section">
+              <div class="rs">
+                <h3>Our Belief</h3>
+                <p>We constantly push ourselves to be our best, we focus on solutions, and we arrive every day
+                  inspired to
+                  make an impact through our talents, passion and hard work.</p>
+
+              </div>
+            </div>
+
+
+          </div>
+
+
+
+        </div>
+
+        <!-----------------------End-------------------------------------------------->
+
+
+        <div class="container-fluid" id="why-us">
+          <div class="services-headline">
+
+            <h1>Why US</h1>
+            <h4>We specialize in providing top-notch on-hire and rental scaffolding services.</h4>
+            <div class="line">
+            </div>
+          </div>
+          <div class="box-wraps">
+            <div class="box-wrap">
+              <i class="fa-solid fa-handshake"></i>
+              <h3>Reliability</h3>
+              <p>We understand the importance of project timelines and offer reliable services, with well-maintained
+                scaffolding equipment.</p>
+            </div>
+            <div class="box-wrap">
+              <i class="fa-solid fa-building-shield"></i>
+              <h3>Highly Safe</h3>
+              <p>We prioritize on safety and well-being of everyone on-site and adhere to rigid safety regulations.
+              </p>
+            </div>
+            <div class="box-wrap">
+              <i class="fa-solid fa-lightbulb"></i>
+              <h3>Innovation</h3>
+              <p>We embrace cutting-edge technology and continuously explore new innovative approaches, setting
+                industry
+                trends.</p>
+            </div>
+            <div class="box-wrap">
+              <i class="fa-solid fa-ranking-star"></i>
+              <h3>High Quality</h3>
+              <p>We offer the best on-hire and rental scaffolding solutions that stand firm even in demanding
+                environments.</p>
+            </div>
+          </div>
+
+        </div>
+
+
+
+        <div class="container-fluid" id="services">
+
+          <div class="services-headline">
+            <h1>Services</h1>
+            <h4>We specialize in providing top-notch on-hire and rental scaffolding services.</h4>
+            <div class="line">
+            </div>
+          </div>
+
+
+          <div class="services-content">
+            <div class="sc sc1">
+              <img src="images/industrial.jpg">
+              <h5>Industrial</h5>
+              <p>MS & CO Scaffolding is recognized for excellence in understanding industrial project requirements
+                and
+                delivering exceptional service of high quality.</p>
+            </div>
+
+            <div class="sc sc1">
+              <img src="images/commercial.jpg">
+              <h5>Commercial</h5>
+              <p>From office buildings to retail spaces, we provide commercial on-hire and rental scaffolding
+                services
+                tailored to cater to diverse business requirements.</p>
+            </div>
+
+            <div class="sc sc1">
+              <img src="images/residential.jpg">
+              <h5>Residential</h5>
+              <p>We offer on-hire and rental scaffolding services that facilitate safe construction, maintenance or
+                renovation work for homeowners and residential builders.</p>
+            </div>
+
+            <div class="sc sc1">
+              <img src="images/colleges.jpg">
+              <h5>Education</h5>
+              <p>We provide top-notch on-hire and rental scaffolding solutions for construction, renovation, or
+                maintenance projects</p>
+            </div>
+
+            <div class="sc sc1">
+              <img src="images/auditorium.jpg">
+              <h5>Auditorium</h5>
+              <p>Aesthetics, comfort and safety are paramount in the hospitality sector and we offer on-hire and
+                rental
+                scaffolding solutions.</p>
+            </div>
+
+            <div class="sc sc1">
+              <img src="images/cinema-theatre.jpg">
+              <h5>Entertainment</h5>
+              <p>Scaffolding services tailored to cater to your project requirements from auditoriums to cinema
+                theatres.
+              </p>
+            </div>
+          </div>
+
+          <!-------------------------------------------------projects--------------------------------->
+          <div class="container-fluid" id="gallery">
+
+          <div class="services-headline">
+            <h1>Gallery</h1>
+            <h4 class="project-head1">We are proud to be associated with numerous construction projects in the
+              commercial,
+              residential, industrial, educational, hospitality and entertainment sectors.</h4>
+            <div class="line">
+            </div>
+          </div>
+
+
+          
+          <div class="container gallery-img">
+            <div class="row">
+              <div class="col">
+                <img src="images/image/img (1).jpg" alt="">
+              </div>
+              <div class="col">
+                <img src="images/image/img (2).jpg" alt="">
+              </div>
+            </div>
+            <div class="row">
+              <div class="col">
+                <img src="images/image/img (3).jpg" alt="">
+              </div>
+              <div class="col">
+                <img src="images/image/img (4).jpg" alt="">
+              </div>
+              <div class="col">
+                <img src="images/image/img (5).jpg" alt="">
+              </div>
+            </div>
+          
+            <div class="row">
+              <div class="col">
+                <img src="images/image/img (6).jpg" alt="">
+              </div>
+            </div>
+
+            <div class="row">
+              <div class="col">
+                <img src="images/image/img (7).jpg" alt="">
+              </div>
+              <div class="col">
+                <img src="images/image/img (8).jpg" alt="">
+              </div>
+            </div>
+
+            <div class="row">
+              <div class="col">
+                <img src="images/image/img (9).jpg" alt="">
+              </div>
+              <div class="col">
+                <img src="images/image/img (10).jpg" alt="">
+              </div>
+              <div class="col">
+                <img src="images/image/img (11).jpg" alt="">
+              </div>
+            </div>
+          </div>
+        </div>
+
+
+
+      </div>
+
+
+
+        <div class="container-fluid" id="contact-us">
+          <div class="services-headline">
+            <h1>Contact us</h1>
+            <h4 class="project-head1">Get in touch for your next scaffolding project</h4>
+            <div class="line">
+            </div>
+          </div>
+
+          <div class="contact-us">
+            <!-- <div class="c-social-icons">
+              <a href="https://wa.me/+919159621674"><i class="fa-brands fa-whatsapp"></i></a>
+              <i class="fa-brands fa-whatsapp"></i>
+              <i class="fa-brands fa-whatsapp"></i>       
+            </div> -->
+
+            <div class="c-address">
+              <div>
+                <h5>Visit us</h5>
+                <div class="c-a-1">
+                  <div>Come and say hello at our office</div>
+                  <div class="address">Surandai-627859, Tenkasi</div>
+                </div>
+              </div>
+
+              <div>
+                <h5>Call us</h5>
+                <div class="c-a-2">
+                  <div>Mon - Fri from 9am to 6pm</div>
+                  <a href="tel:+919159621674"><div>+91 9159621674</div></a>
+                </div>
+              </div>
+              <div>
+                <h5>Chat to us</h5>
+                <div class="c-a-3">
+                  <div>Our friendly team is here to help</div>
+                  <a href="mailto:edwin26496@gmail.com"><div>edwin26496@gmail.com</div></a>
+                </div>
+              </div>
+            </div>
+
+          </div>
+
+        </div>
+
+
+      </div>
+      
+</div>
+
+      <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>
